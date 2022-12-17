@@ -1,11 +1,12 @@
 # IDS706-Final-Project
+# Movie Recommender Microservice via Azure & Streamlit
+
 [![Testing and Linting with Github Actions](https://github.com/Yayunyun/ids706-final/actions/workflows/main.yml/badge.svg)](https://github.com/Yayunyun/ids706-final/actions/workflows/main.yml)
 
-# Movie Recommender Microservice via Azure Deployment & Streamlit
 [![Python application test with Github Actions](https://github.com/nogibjj/fastapi_news/actions/workflows/main.yml/badge.svg)](https://github.com/nogibjj/fastapi_news/actions/workflows/main.yml) 
 
-## Final Project Workflow diagram
-
+# Final Project Workflow diagram
+![Final_Proct_workflow](https://user-images.githubusercontent.com/112578755/208226954-fea32706-0883-4f95-96e1-02f59e2e3fc0.jpg)
 
 # Project purpose:
 
@@ -13,17 +14,21 @@ The project aims to build a web app that is able to reuturn movie recommendation
 
 # Project process: Containerized Streamlit in Azure
 
-Follow the commands below
+#Follow the commands below
 
 `docker build .`
+
 `docker image ls`
+
 `docker tag <imageid> movierecommender.azurecr.io/recommender:latest`
+
 `docker push movierecommender.azurecr.io/recommender:latest`
+
 `docker run -p 8501:8501 movierecommender.azurecr.io/recommender:latest`
 
 1. Streamlit was leveraged to display the movie recommendations
 2. Using Codespace as the environment, the microservice was containerized in Azure Registry and pushed to production using Streamlit
-3. Continuous Delivery was performed using AWS CodeBuild. (via buildspec.yml)
+3. Continuous Delivery was performed using Azure Docker.
 4. Continous Integration was enabled via Github Actions.
 
 
