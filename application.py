@@ -1,5 +1,4 @@
 import pandas as pd
-import numpy as np
 import warnings
 warnings.filterwarnings("ignore")
 import streamlit as st
@@ -14,14 +13,14 @@ data[text_data] = data[text_data].astype(str)
 data["key"] = data["key"].str.encode('ascii', 'ignore').str.decode('ascii')
 
 with open("cosine_sim.pickle", 'rb') as f:
-        cosine_sim = pickle.load(f)
+    cosine_sim = pickle.load(f)
 
 indices = pd.Series(data.index, index = data['title']).drop_duplicates()
 
-def get_recommendations(title, cosine_sim = cosine_sim,num=10):
-    idx = indices[title]
-    sim_scores = list(enumerate(cosine_sim[idx]))  # Get the similarity scores of all movies wrt input movie
-    sim_scores = sorted(sim_scores, key = lambda x : x[1], reverse = True)
+def get_recommendations(title, cosine_sim0 = cosine_sim,num=10, indices0 = indices):
+    idx = indices0[title]
+    sim_scores = list(enumerate(cosine_sim0[idx]))  # Get the similarity scores of all movies wrt input movie
+    sim_scores = sor ted(sim_scores, key = lambda x : x[1], reverse = True)
     sim_scores = sim_scores[1:num+1]
     movie_indices = [i[0] for i in sim_scores]
     return data['title'].iloc[movie_indices]
