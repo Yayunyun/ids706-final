@@ -1,1 +1,2 @@
 # IDS706-Final-Project
+[![Testing and Linting with Github Actions](https://github.com/Yayunyun/ids706-final/actions/workflows/main.yml/badge.svg)](https://github.com/Yayunyun/ids706-final/actions/workflows/main.yml)
