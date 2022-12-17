@@ -31,7 +31,8 @@ The project aims to build a web app that is able to reuturn movie recommendation
 4. Continous Integration was enabled via Github Actions.
 
 
-# [Deployed domain](https://recommender-movie.azurewebsites.net)
+# Deployed domain
+[Try the web app and find your movie here](https://recommender-movie.azurewebsites.net)
 
 # Example Output
 
