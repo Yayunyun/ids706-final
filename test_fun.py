@@ -1,3 +1,3 @@
-# to be added
-def test():
-    assert (1+1) == 2
+import application
+def test_app():
+    assert application.get_recommendations("Avatar").iloc[0] == "Cypher"
