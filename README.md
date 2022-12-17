@@ -3,7 +3,6 @@
 
 [![Testing and Linting with Github Actions](https://github.com/Yayunyun/ids706-final/actions/workflows/main.yml/badge.svg)](https://github.com/Yayunyun/ids706-final/actions/workflows/main.yml)
 
-[![Python application test with Github Actions](https://github.com/nogibjj/fastapi_news/actions/workflows/main.yml/badge.svg)](https://github.com/nogibjj/fastapi_news/actions/workflows/main.yml) 
 
 # Final Project Workflow diagram
 ![Final_Proct_workflow](https://user-images.githubusercontent.com/112578755/208226954-fea32706-0883-4f95-96e1-02f59e2e3fc0.jpg)
