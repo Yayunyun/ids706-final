@@ -34,9 +34,9 @@ def get_recommendations(title, cosine_sim0=cosine_sim, num=10, indices0=indices)
 
 def main():
     st.title("Movie Recommender")
-    st.write("This is a movie recommender based on the IMDB dataset.")
+    st.write("This is a movie recommender based on the IMDB dataset!!!")
     st.write(
-        "The user can select a song and the recommender will find the 10 most similar songs."
+        "The user can select a movie and the recommender will find the 10 most similar movies."
     )
 
     menu = ["Home", "Recommender"]
