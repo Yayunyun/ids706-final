@@ -3,6 +3,7 @@ import numpy as np
 import warnings
 warnings.filterwarnings("ignore")
 import streamlit as st
+import pickle
 
 data = pd.read_csv("./clean_df/clean_df.csv")
 data = data.drop(['Unnamed: 0'],axis = 1)
@@ -12,9 +13,8 @@ text_data = ['title','director','actor','overview','genres_list','key','country'
 data[text_data] = data[text_data].astype(str)
 data["key"] = data["key"].str.encode('ascii', 'ignore').str.decode('ascii')
 
-
-with open('cosine_sim.npy', 'rb') as f:
-    cosine_sim = np.load(f)
+with open("cosine_sim.pickle", 'rb') as f:
+        cosine_sim = pickle.load(f)
 
 indices = pd.Series(data.index, index = data['title']).drop_duplicates()
 
